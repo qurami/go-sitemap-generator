@@ -115,6 +115,8 @@ func (su *sitemapURL) XML() []byte {
 	SetBuilderElementValue(url, su.data, "video")
 	SetBuilderElementValue(url, su.data, "image")
 	SetBuilderElementValue(url, su.data, "geo")
+	SetBuilderElementValue(url, su.data, "alternate")
+	SetBuilderElementValue(url, su.data, "alternates")
 
 	if su.opts.pretty {
 		doc.Indent(2)

@@ -97,7 +97,11 @@ func SetBuilderElementValue(elm *etree.Element, data [][]interface{}, basekey st
 		}
 	case []Attr:
 		for _, attr := range value {
-			child = elm.CreateElement(key)
+			var k = key
+			if (key == "alternates") {
+				k = "xhtml:link"
+			}
+			child = elm.CreateElement(k)
 			for k, v := range attr {
 				child.CreateAttr(k, v)
 			}
