@@ -55,7 +55,7 @@ var (
         xmlns:news="` + SchemaNews + `"
         xmlns:mobile="` + SchemaMobile + `"
         xmlns:pagemap="` + SchemaPagemap + `"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		xmlns:xhtml="http://www.w3.org/TR/xhtml11/xhtml11_schema.html"
     >`)
 	// XMLFooter and XMLHeader will used from user together .
 	XMLFooter = []byte("</urlset>")
