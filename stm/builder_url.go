@@ -97,6 +97,8 @@ func (su *sitemapURL) XML() []byte {
 	url := doc.CreateElement("url")
 
 	SetBuilderElementValue(url, su.data.URLJoinBy("loc", "host", "loc"), "loc")
+
+	/*
 	if _, ok := SetBuilderElementValue(url, su.data, "lastmod"); !ok {
 		lastmod := url.CreateElement("lastmod")
 		lastmod.SetText(time.Now().Format(time.RFC3339))
@@ -109,6 +111,8 @@ func (su *sitemapURL) XML() []byte {
 		priority := url.CreateElement("priority")
 		priority.SetText("0.5")
 	}
+	*/
+
 	SetBuilderElementValue(url, su.data, "expires")
 	SetBuilderElementValue(url, su.data, "mobile")
 	SetBuilderElementValue(url, su.data, "news")
